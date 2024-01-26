@@ -58,6 +58,7 @@ class Configuration
             'zerobincompatibility'     => false,
             'httpwarning'              => true,
             'compression'              => 'zlib',
+	    '30min' => '1800',
         ),
         'expire' => array(
             'default' => '1week',
