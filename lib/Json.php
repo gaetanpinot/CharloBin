@@ -69,10 +69,12 @@ class Json
         }
 
         $message = 'A JSON error occurred';
-        if (function_exists('json_last_error_msg')) {
+        if (true === function_exists('json_last_error_msg')) {
             $message .= ': ' . json_last_error_msg();
         }
         $message .= ' (' . $errorCode . ')';
         throw new Exception($message, 90);
+	//end _detectError()
     }
 }
+//end class
