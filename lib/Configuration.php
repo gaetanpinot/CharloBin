@@ -144,7 +144,7 @@ class Configuration
                     $this->_configuration['model']['class'],
                     ['Database', 'privatebin_db', 'zerobin_db']
                 )
-            ) {
+            ) 
                 // commentaire
                 $values = [
                     'dsn' => 'sqlite:'.PATH.'data'.DIRECTORY_SEPARATOR.'db.sq3',
