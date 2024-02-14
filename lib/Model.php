@@ -14,6 +14,7 @@
 
 namespace PrivateBin;
 
+$vartest = 'DKSKKKKDKSK';
 use PrivateBin\Model\Paste;
 use PrivateBin\Persistence\PurgeLimiter;
 
