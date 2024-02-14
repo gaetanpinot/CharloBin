@@ -20,3 +20,6 @@ lint:
 	find ./ -not -path "./vendor/*" -type f -name '*.php' -exec php -l {} \; |grep -v ^No >>rapportLint.txt;\
 	echo "Fin de la detection d'erreur de syntaxe";\
 	echo "Fin du lintage, rapport disponible dans rapportLint.txt";
+
+fixphp:
+
