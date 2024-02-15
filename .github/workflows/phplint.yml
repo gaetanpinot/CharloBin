@@ -23,4 +23,3 @@ jobs:
         uses: wearerequired/lint-action@v2
         with:
           php_codesniffer: true
-
