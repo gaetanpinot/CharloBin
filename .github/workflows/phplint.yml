@@ -1,12 +1,6 @@
 name: Lint
-
 on:
-  # Trigger the workflow on push or pull request,
-  # but only for the main branch
-  push:
-    branches:
-      - main
-  pull_request:
+ pull_request:
     branches:
       - main
 permissions:
@@ -16,21 +10,16 @@ jobs:
   run-linters:
     name: Run linters
     runs-on: ubuntu-latest
-
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v3
-
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: "7.4"
           coverage: none
           tools: phpcs
-
       - name: Run linters
         uses: wearerequired/lint-action@v2
         with:
           php_codesniffer: true
-          # Optional: Ignore warnings
-          #php_codesniffer_args: "-n"
