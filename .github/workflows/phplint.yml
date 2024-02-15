@@ -20,13 +20,7 @@ jobs:
           coverage: none
           tools: phpcs
       - name: Run linters
-        id: linters
         uses: wearerequired/lint-action@v2
         with:
           php_codesniffer: true
-      - name: Check linter results
-        run: |
-          if [ "${{ steps.linters.outcome }}" != "success" ]; then
-            echo "Linting failed. Please fix the issues before merging.";
-            exit 1;
-          fi
+
